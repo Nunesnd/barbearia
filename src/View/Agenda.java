@@ -119,7 +119,7 @@ public class Agenda extends javax.swing.JFrame {
 
         getContentPane().add(txtPbservacao, new org.netbeans.lib.awtextra.AbsoluteConstraints(530, 120, 290, 150));
 
-        jButton1.setBackground(new java.awt.Color(133, 63, 0));
+        jButton1.setBackground(new java.awt.Color(180, 117, 58));
         jButton1.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         jButton1.setForeground(new java.awt.Color(255, 255, 255));
         jButton1.setText("Agendar");
