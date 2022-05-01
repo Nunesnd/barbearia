@@ -27,15 +27,17 @@ public class MenuPrincipal extends javax.swing.JFrame {
     private void initComponents() {
 
         jLabel1 = new javax.swing.JLabel();
-        jMenuBar1 = new javax.swing.JMenuBar();
+        BarraMenu = new javax.swing.JMenuBar();
         MenuCadastro = new javax.swing.JMenu();
         MenuCadastroCliente = new javax.swing.JMenuItem();
-        MenuClienteServicos = new javax.swing.JMenuItem();
-        jMenuOperacao = new javax.swing.JMenu();
+        MenuCadastroServico = new javax.swing.JMenuItem();
+        MenuServico = new javax.swing.JMenu();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        getContentPane().setLayout(new javax.swing.OverlayLayout(getContentPane()));
 
         jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/View/imagens/login.jpg"))); // NOI18N
+        getContentPane().add(jLabel1);
 
         MenuCadastro.setText("Cadastro");
 
@@ -43,29 +45,16 @@ public class MenuPrincipal extends javax.swing.JFrame {
         MenuCadastroCliente.setText("Cliente");
         MenuCadastro.add(MenuCadastroCliente);
 
-        MenuClienteServicos.setIcon(new javax.swing.ImageIcon(getClass().getResource("/View/imagens/Icones/tesoura16.png"))); // NOI18N
-        MenuClienteServicos.setText("Serviços");
-        MenuCadastro.add(MenuClienteServicos);
+        MenuCadastroServico.setIcon(new javax.swing.ImageIcon(getClass().getResource("/View/imagens/Icones/tesoura16.png"))); // NOI18N
+        MenuCadastroServico.setText("Serviço");
+        MenuCadastro.add(MenuCadastroServico);
 
-        jMenuBar1.add(MenuCadastro);
+        BarraMenu.add(MenuCadastro);
 
-        jMenuOperacao.setText("Operação");
-        jMenuBar1.add(jMenuOperacao);
+        MenuServico.setText("Serviços");
+        BarraMenu.add(MenuServico);
 
-        setJMenuBar(jMenuBar1);
-
-        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
-        getContentPane().setLayout(layout);
-        layout.setHorizontalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jLabel1)
-        );
-        layout.setVerticalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addComponent(jLabel1)
-                .addGap(0, 0, Short.MAX_VALUE))
-        );
+        setJMenuBar(BarraMenu);
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -107,11 +96,11 @@ public class MenuPrincipal extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JMenuBar BarraMenu;
     private javax.swing.JMenu MenuCadastro;
     private javax.swing.JMenuItem MenuCadastroCliente;
-    private javax.swing.JMenuItem MenuClienteServicos;
+    private javax.swing.JMenuItem MenuCadastroServico;
+    private javax.swing.JMenu MenuServico;
     private javax.swing.JLabel jLabel1;
-    private javax.swing.JMenuBar jMenuBar1;
-    private javax.swing.JMenu jMenuOperacao;
     // End of variables declaration//GEN-END:variables
 }
