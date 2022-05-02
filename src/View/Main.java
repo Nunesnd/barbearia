@@ -1,23 +1,33 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
- */
 package View;
 
+import Models.Agendamento;
 import Models.Cliente;
 import Models.Servicos;
+import Models.Usuario;
 
-/**
- *
- * @author nunes
- */
 public class Main {
     public static void main (String[] args){
-        Servicos barba = new Servicos(1, "barba", 30);
         
-        Cliente crient = new Cliente(1, "Tião", 'M', "234567890", "Rua tupi");
+        Cliente cliente = new Cliente(1, "Alex", "Rua da Silva", "4567898");
         
-        System.out.println(crient.getNome());
-        System.out.println(barba.getDescricao());
+        System.err.println("Primeira linha "+ cliente.getNome());
+        
+        //System.err.println("Segunda linha "+ cliente.getId());
+        //System.err.println("Terceira linha "+ cliente.getEndereco());
+        //System.err.println("Quarta linha "+ cliente.getCep());
+        
+        
+        Usuario user = new Usuario(1, "Ana", "jhgfdertyui", "Qualquer");
+        
+        //System.out.println("Quinta linha "+ user.getId());
+        //System.out.println("Sexta linha "+ user.getNivelAcesso());
+        //System.out.println("Setima linha "+ user.getSenha());
+        
+        Servicos serv = new Servicos(1, "Barba", 15);
+        
+        Agendamento agendaa = new Agendamento(1, cliente, serv, 0, "21/05/2022 13:00");
+        
+        System.out.println(agendaa.getCliente().getNome());
+        
     }
 }
