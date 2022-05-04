@@ -4,17 +4,24 @@
  */
 package View;
 
+import Controller.LoginController;
+import javax.swing.JOptionPane;
+
 /**
  *
  * @author nunes
  */
 public class Login extends javax.swing.JFrame {
 
+    private final LoginController controller;
+
     /**
      * Creates new form Login
      */
     public Login() {
         initComponents();
+        
+        controller = new LoginController(this);
     }
 
     /**
@@ -29,8 +36,8 @@ public class Login extends javax.swing.JFrame {
         txt_usr = new javax.swing.JLabel();
         txt_pwd = new javax.swing.JLabel();
         lbl_tit_login = new javax.swing.JLabel();
-        lbl_log_usr = new javax.swing.JTextField();
-        lbl_log_pwd = new javax.swing.JPasswordField();
+        txt_log_usr = new javax.swing.JTextField();
+        txt_log_pwd = new javax.swing.JPasswordField();
         btn_acess = new javax.swing.JButton();
         img_login_sombra = new javax.swing.JLabel();
         img_background_login = new javax.swing.JLabel();
@@ -53,8 +60,20 @@ public class Login extends javax.swing.JFrame {
         lbl_tit_login.setForeground(new java.awt.Color(255, 255, 255));
         lbl_tit_login.setText("Login");
         getContentPane().add(lbl_tit_login, new org.netbeans.lib.awtextra.AbsoluteConstraints(390, 150, -1, -1));
-        getContentPane().add(lbl_log_usr, new org.netbeans.lib.awtextra.AbsoluteConstraints(380, 240, 200, -1));
-        getContentPane().add(lbl_log_pwd, new org.netbeans.lib.awtextra.AbsoluteConstraints(380, 310, 200, -1));
+
+        txt_log_usr.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                txt_log_usrActionPerformed(evt);
+            }
+        });
+        getContentPane().add(txt_log_usr, new org.netbeans.lib.awtextra.AbsoluteConstraints(380, 240, 200, -1));
+
+        txt_log_pwd.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                txt_log_pwdActionPerformed(evt);
+            }
+        });
+        getContentPane().add(txt_log_pwd, new org.netbeans.lib.awtextra.AbsoluteConstraints(380, 310, 200, -1));
 
         btn_acess.setBackground(new java.awt.Color(198, 128, 40));
         btn_acess.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
@@ -76,8 +95,20 @@ public class Login extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void btn_acessActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_acessActionPerformed
-        // TODO add your handling code here:
+        // Executa função aopressionar o botão:
+        controller.fizTarefa();
+        System.out.println(txt_log_usr.getText());
+        System.out.println(txt_log_pwd.getText());
+        
     }//GEN-LAST:event_btn_acessActionPerformed
+
+    private void txt_log_usrActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txt_log_usrActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_txt_log_usrActionPerformed
+
+    private void txt_log_pwdActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txt_log_pwdActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_txt_log_pwdActionPerformed
 
     /**
      * @param args the command line arguments
@@ -118,10 +149,14 @@ public class Login extends javax.swing.JFrame {
     private javax.swing.JButton btn_acess;
     private javax.swing.JLabel img_background_login;
     private javax.swing.JLabel img_login_sombra;
-    private javax.swing.JPasswordField lbl_log_pwd;
-    private javax.swing.JTextField lbl_log_usr;
     private javax.swing.JLabel lbl_tit_login;
+    private javax.swing.JPasswordField txt_log_pwd;
+    private javax.swing.JTextField txt_log_usr;
     private javax.swing.JLabel txt_pwd;
     private javax.swing.JLabel txt_usr;
     // End of variables declaration//GEN-END:variables
+
+    public void exibeMensagem(String mensagem) {
+        JOptionPane.showMessageDialog(null, mensagem);
+    }
 }
