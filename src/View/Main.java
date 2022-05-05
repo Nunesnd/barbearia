@@ -1,9 +1,9 @@
 package View;
 
-import Models.Agendamento;
-import Models.Cliente;
-import Models.Servicos;
-import Models.Usuario;
+import Model.Agendamento;
+import Model.Cliente;
+import Model.Servico;
+import Model.Usuario;
 
 public class Main {
     public static void main (String[] args){
@@ -23,7 +23,7 @@ public class Main {
         //System.out.println("Sexta linha "+ user.getNivelAcesso());
         //System.out.println("Setima linha "+ user.getSenha());
         
-        Servicos serv = new Servicos(1, "Barba", 15);
+        Servico serv = new Servico(1, "Barba", 15);
         
         Agendamento agendaa = new Agendamento(1, cliente, serv, 0, "21/05/2022 13:00");
         

@@ -1,4 +1,4 @@
-package Models;
+package Model;
 
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
@@ -11,12 +11,12 @@ public class Agendamento {
  
     private int id;
     private Cliente cliente;
-    private Servicos servico;
+    private Servico servico;
     private float valor;
     private Date data;
     private String observacao;
 
-    public Agendamento(int id, Cliente cliente, Servicos servico, float valor, String data) {
+    public Agendamento(int id, Cliente cliente, Servico servico, float valor, String data) {
         this.id = id;
         this.cliente = cliente;
         this.servico = servico;
@@ -44,11 +44,11 @@ public class Agendamento {
         this.cliente = cliente;
     }
 
-    public Servicos getServico() {
+    public Servico getServico() {
         return servico;
     }
 
-    public void setServico(Servicos servico) {
+    public void setServico(Servico servico) {
         this.servico = servico;
     }
 

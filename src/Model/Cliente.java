@@ -1,4 +1,4 @@
-package Models;
+package Model;
 
 import java.util.Date;
 import javax.management.loading.PrivateClassLoader;

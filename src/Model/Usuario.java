@@ -2,7 +2,7 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
  */
-package Models;
+package Model;
 
 import java.util.Date;
 
@@ -17,6 +17,13 @@ public class Usuario extends Pessoa{
     public Usuario(int id, String nome) {
         super(id, nome);
     }
+
+    public Usuario(int id, String nome, String senha) {
+        super(id, nome);
+        this.senha = senha;
+    }
+    
+    
 
     public Usuario(int id, String nome, String senha, String nivelAcesso) {
         super(id, nome);

@@ -3,12 +3,17 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
+            <file>file:/C:/Users/nunes/Documents/Mega%20pasta%20pessoal/GitHub/treinamento/barbearia/src/Controller/Helper/LoginHelper.java</file>
+            <file>file:/C:/Users/nunes/Documents/Mega%20pasta%20pessoal/GitHub/treinamento/barbearia/src/Models/DAO/ServicoDAO.java</file>
+            <file>file:/C:/Users/nunes/Documents/Mega%20pasta%20pessoal/GitHub/treinamento/barbearia/src/Controller/LoginController.java</file>
             <file>file:/C:/Users/nunes/Documents/Mega%20pasta%20pessoal/GitHub/treinamento/barbearia/src/View/Main.java</file>
+            <file>file:/C:/Users/nunes/Documents/Mega%20pasta%20pessoal/GitHub/treinamento/barbearia/src/View/Login.java</file>
             <file>file:/C:/Users/nunes/Documents/Mega%20pasta%20pessoal/GitHub/treinamento/barbearia/src/Models/Agendamento.java</file>
             <file>file:/C:/Users/nunes/Documents/Mega%20pasta%20pessoal/GitHub/treinamento/barbearia/src/Models/Cliente.java</file>
             <file>file:/C:/Users/nunes/Documents/Mega%20pasta%20pessoal/GitHub/treinamento/barbearia/src/Models/Pessoa.java</file>
             <file>file:/C:/Users/nunes/Documents/Mega%20pasta%20pessoal/GitHub/treinamento/barbearia/src/Models/Usuario.java</file>
-            <file>file:/C:/Users/nunes/Documents/Mega%20pasta%20pessoal/GitHub/treinamento/barbearia/src/Models/Servicos.java</file>
+            <file>file:/C:/Users/nunes/Documents/Mega%20pasta%20pessoal/GitHub/treinamento/barbearia/src/Models/DAO/AgendamentoDAO.java</file>
+            <file>file:/C:/Users/nunes/Documents/Mega%20pasta%20pessoal/GitHub/treinamento/barbearia/src/Models/Servico.java</file>
         </group>
     </open-files>
 </project-private>

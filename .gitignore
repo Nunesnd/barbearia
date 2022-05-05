@@ -398,3 +398,5 @@ FodyWeavers.xsd
 *.sln.iml
 /treinamento/barbearia/nbproject/private/
 /build/
+
+/BarberShop_Material/

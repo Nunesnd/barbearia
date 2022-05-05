@@ -1,4 +1,4 @@
-package Models;
+package Model;
 
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
@@ -26,7 +26,7 @@ abstract public class Pessoa {
         this.nome = nome;
         this.sexo = sexo;
         try {
-            this.nascimento = new SimpleDateFormat("dd/MM/yyyy HH:mm").parse(nascimento);
+            this.nascimento = new SimpleDateFormat("dd/MM/yyyy").parse(nascimento);
         } catch (ParseException ex) {
             Logger.getLogger(Pessoa.class.getName()).log(Level.SEVERE, null, ex);
         }

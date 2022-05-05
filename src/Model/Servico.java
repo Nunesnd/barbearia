@@ -2,25 +2,25 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
  */
-package Models;
+package Model;
 
 /**
  *
  * @author nunes
  */
-public class Servicos {
+public class Servico {
     
     private int id;
     private String descricao;
     private float valor;
 
-    public Servicos(int id, String descricao, float valor) {
+    public Servico(int id, String descricao, float valor) {
         this.id = id;
         this.descricao = descricao;
         this.valor = valor;
     }
 
-    public Servicos() {
+    public Servico() {
         throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
     }
 
@@ -38,6 +38,14 @@ public class Servicos {
 
     public void setValor(float valor) {
         this.valor = valor;
+    }
+
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
     }
     
     

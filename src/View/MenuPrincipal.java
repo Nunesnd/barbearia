@@ -4,17 +4,22 @@
  */
 package View;
 
+import Controller.MenuPrincipalController;
+
 /**
  *
  * @author nunes
  */
 public class MenuPrincipal extends javax.swing.JFrame {
 
+    private final MenuPrincipalController controller;
+
     /**
      * Creates new form menuPrincipal
      */
     public MenuPrincipal() {
         initComponents();
+        this.controller = new MenuPrincipalController(this);
     }
 
     /**
@@ -26,12 +31,17 @@ public class MenuPrincipal extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        jMenu1 = new javax.swing.JMenu();
         jLabel1 = new javax.swing.JLabel();
         BarraMenu = new javax.swing.JMenuBar();
         MenuCadastro = new javax.swing.JMenu();
         MenuCadastroCliente = new javax.swing.JMenuItem();
         MenuCadastroServico = new javax.swing.JMenuItem();
         MenuServico = new javax.swing.JMenu();
+        mnAgenda = new javax.swing.JMenuItem();
+        jMenu2 = new javax.swing.JMenu();
+
+        jMenu1.setText("jMenu1");
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         getContentPane().setLayout(new javax.swing.OverlayLayout(getContentPane()));
@@ -52,12 +62,30 @@ public class MenuPrincipal extends javax.swing.JFrame {
         BarraMenu.add(MenuCadastro);
 
         MenuServico.setText("Serviços");
+
+        mnAgenda.setIcon(new javax.swing.ImageIcon(getClass().getResource("/View/imagens/Icones/agenda16.png"))); // NOI18N
+        mnAgenda.setText("Agenda");
+        mnAgenda.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                mnAgendaActionPerformed(evt);
+            }
+        });
+        MenuServico.add(mnAgenda);
+
         BarraMenu.add(MenuServico);
+
+        jMenu2.setText("jMenu2");
+        BarraMenu.add(jMenu2);
 
         setJMenuBar(BarraMenu);
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void mnAgendaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_mnAgendaActionPerformed
+        // TODO add your handling code here:
+        this.controller.navegarParaAgenda();
+    }//GEN-LAST:event_mnAgendaActionPerformed
 
     /**
      * @param args the command line arguments
@@ -102,5 +130,8 @@ public class MenuPrincipal extends javax.swing.JFrame {
     private javax.swing.JMenuItem MenuCadastroServico;
     private javax.swing.JMenu MenuServico;
     private javax.swing.JLabel jLabel1;
+    private javax.swing.JMenu jMenu1;
+    private javax.swing.JMenu jMenu2;
+    private javax.swing.JMenuItem mnAgenda;
     // End of variables declaration//GEN-END:variables
 }
