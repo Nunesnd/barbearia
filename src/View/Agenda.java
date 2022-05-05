@@ -4,17 +4,24 @@
  */
 package View;
 
+import Controller.AgendaController;
+import javax.swing.JTable;
+
 /**
  *
  * @author nunes
  */
 public class Agenda extends javax.swing.JFrame {
 
+    private final AgendaController controller;
+
     /**
      * Creates new form Agenda
      */
     public Agenda() {
         initComponents();
+        controller = new AgendaController(this);
+        iniciar();
     }
 
     /**
@@ -44,11 +51,11 @@ public class Agenda extends javax.swing.JFrame {
         jTextArea1 = new javax.swing.JTextArea();
         jButton1 = new javax.swing.JButton();
         jScrollPane1 = new javax.swing.JScrollPane();
-        jTable1 = new javax.swing.JTable();
+        TabelaAgendamentos = new javax.swing.JTable();
         imgFundo = new javax.swing.JLabel();
         imgArea = new javax.swing.JLabel();
 
-        setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         TituloAgenda.setFont(new java.awt.Font("Segoe UI", 1, 36)); // NOI18N
@@ -130,12 +137,9 @@ public class Agenda extends javax.swing.JFrame {
         });
         getContentPane().add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(530, 290, 290, 50));
 
-        jTable1.setModel(new javax.swing.table.DefaultTableModel(
+        TabelaAgendamentos.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
-                {null, null, null, null, null, null, null},
-                {null, null, null, null, null, null, null},
-                {null, null, null, null, null, null, null},
-                {null, null, null, null, null, null, null}
+
             },
             new String [] {
                 "Código", "Cliente", "Serviço", "Valor", "Data", "Hora", "Observação"
@@ -156,7 +160,7 @@ public class Agenda extends javax.swing.JFrame {
                 return canEdit [columnIndex];
             }
         });
-        jScrollPane1.setViewportView(jTable1);
+        jScrollPane1.setViewportView(TabelaAgendamentos);
 
         getContentPane().add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 380, 750, 160));
 
@@ -216,6 +220,7 @@ public class Agenda extends javax.swing.JFrame {
     private javax.swing.JLabel Hora;
     private javax.swing.JComboBox<String> IntValor;
     private javax.swing.JLabel Servico;
+    private javax.swing.JTable TabelaAgendamentos;
     private javax.swing.JLabel TituloAgenda;
     private javax.swing.JLabel Valor;
     private javax.swing.JLabel codigo;
@@ -224,11 +229,26 @@ public class Agenda extends javax.swing.JFrame {
     private javax.swing.JButton jButton1;
     private javax.swing.JComboBox<String> jComboBox1;
     private javax.swing.JScrollPane jScrollPane1;
-    private javax.swing.JTable jTable1;
     private javax.swing.JTextArea jTextArea1;
     private javax.swing.JLabel lblObservacao;
     private javax.swing.JTextField txtIdCliente;
     private javax.swing.JTextField txtNomeCliente;
     private javax.swing.JScrollPane txtPbservacao;
     // End of variables declaration//GEN-END:variables
+
+    private void iniciar() {
+        this.controller.atualizaTabela();
+    }
+
+    public JTable getTabelaAgendamentos() {
+        return TabelaAgendamentos;
+    }
+
+    public void setTabelaAgendamentos(JTable TabelaAgendamentos) {
+        this.TabelaAgendamentos = TabelaAgendamentos;
+    }
+
+    
+    
+    
 }
